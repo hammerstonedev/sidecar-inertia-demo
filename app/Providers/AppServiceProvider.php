@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\SidecarGateway;
 use Illuminate\Support\ServiceProvider;
+use Inertia\Ssr\Gateway;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->instance(Gateway::class, new SidecarGateway);
     }
 
     /**
