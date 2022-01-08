@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9abb9e2086e7a83620e6627f80e387f",
+    "content-hash": "3ed7f259899a51ed8fd7a95f749ac623",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1206,16 +1206,16 @@
         },
         {
             "name": "hammerstone/sidecar",
-            "version": "v0.3.0",
+            "version": "v0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hammerstonedev/sidecar.git",
-                "reference": "ce8b511065ce18148bfe5170ea09aee9c22f0750"
+                "reference": "780c98b78a7a5acdfd634d507b405a4b5be8580e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/ce8b511065ce18148bfe5170ea09aee9c22f0750",
-                "reference": "ce8b511065ce18148bfe5170ea09aee9c22f0750",
+                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/780c98b78a7a5acdfd634d507b405a4b5be8580e",
+                "reference": "780c98b78a7a5acdfd634d507b405a4b5be8580e",
                 "shasum": ""
             },
             "require": {
@@ -1258,20 +1258,26 @@
             "description": "A Laravel package to deploy Lambda functions alongside your main application.",
             "support": {
                 "issues": "https://github.com/hammerstonedev/sidecar/issues",
-                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.3.0"
+                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.3.4"
             },
-            "time": "2021-07-20T14:56:23+00:00"
+            "time": "2022-01-02T21:58:32+00:00"
         },
         {
             "name": "hammerstone/sidecar-inertia",
-            "version": "dev-master",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hammerstonedev/sidecar-inertia.git",
+                "reference": "d55ea837aedebeac2670969a442fe212327437a1"
+            },
             "dist": {
-                "type": "path",
-                "url": "../hammerstone/sidecar-inertia-ssr",
-                "reference": "f23e1872ff1e5fd607812330b3332a7ac46ef2d6"
+                "type": "zip",
+                "url": "https://api.github.com/repos/hammerstonedev/sidecar-inertia/zipball/d55ea837aedebeac2670969a442fe212327437a1",
+                "reference": "d55ea837aedebeac2670969a442fe212327437a1",
+                "shasum": ""
             },
             "require": {
-                "hammerstone/sidecar": "v0.3.0",
+                "hammerstone/sidecar": "v0.3.4",
                 "illuminate/support": "^8.0",
                 "inertiajs/inertia-laravel": "^0.5.1",
                 "php": "^7.2|^8.0"
@@ -1281,6 +1287,7 @@
                 "orchestra/testbench": "^5.0|^6.0",
                 "phpunit/phpunit": "^8.4"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1292,11 +1299,7 @@
                     "Hammerstone\\Sidecar\\Inertia\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Hammerstone\\Sidecar\\Inertia\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1307,9 +1310,11 @@
                 }
             ],
             "description": "A Laravel package to render Inertia apps on AWS Lambda.",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/hammerstonedev/sidecar-inertia/issues",
+                "source": "https://github.com/hammerstonedev/sidecar-inertia/tree/main"
+            },
+            "time": "2022-01-08T03:57:33+00:00"
         },
         {
             "name": "inertiajs/inertia-laravel",
