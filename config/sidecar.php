@@ -5,7 +5,7 @@ return [
      * All of your function classes that you'd like to deploy go here.
      */
     'functions' => [
-        \App\SSR::class
+        \Hammerstone\Sidecar\Inertia\SSR::class
     ],
 
     /*

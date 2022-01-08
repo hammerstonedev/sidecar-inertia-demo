@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5eaec165a3ecd47aa36480706fe45223",
+    "content-hash": "a9abb9e2086e7a83620e6627f80e387f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1206,16 +1206,16 @@
         },
         {
             "name": "hammerstone/sidecar",
-            "version": "v0.3.4",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hammerstonedev/sidecar.git",
-                "reference": "780c98b78a7a5acdfd634d507b405a4b5be8580e"
+                "reference": "ce8b511065ce18148bfe5170ea09aee9c22f0750"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/780c98b78a7a5acdfd634d507b405a4b5be8580e",
-                "reference": "780c98b78a7a5acdfd634d507b405a4b5be8580e",
+                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/ce8b511065ce18148bfe5170ea09aee9c22f0750",
+                "reference": "ce8b511065ce18148bfe5170ea09aee9c22f0750",
                 "shasum": ""
             },
             "require": {
@@ -1258,9 +1258,58 @@
             "description": "A Laravel package to deploy Lambda functions alongside your main application.",
             "support": {
                 "issues": "https://github.com/hammerstonedev/sidecar/issues",
-                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.3.4"
+                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.3.0"
             },
-            "time": "2022-01-02T21:58:32+00:00"
+            "time": "2021-07-20T14:56:23+00:00"
+        },
+        {
+            "name": "hammerstone/sidecar-inertia",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../hammerstone/sidecar-inertia-ssr",
+                "reference": "f23e1872ff1e5fd607812330b3332a7ac46ef2d6"
+            },
+            "require": {
+                "hammerstone/sidecar": "v0.3.0",
+                "illuminate/support": "^8.0",
+                "inertiajs/inertia-laravel": "^0.5.1",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hammerstone\\Sidecar\\Inertia\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Hammerstone\\Sidecar\\Inertia\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Laravel package to render Inertia apps on AWS Lambda.",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "inertiajs/inertia-laravel",
@@ -8969,7 +9018,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "hammerstone/sidecar-inertia": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

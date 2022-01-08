@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\SidecarGateway;
+use Hammerstone\Sidecar\Inertia\SidecarGateway;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Ssr\Gateway;
 
