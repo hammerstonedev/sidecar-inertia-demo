@@ -9,7 +9,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "hammerstone/sidecar": "^0.3.4",
-        "inertiajs/inertia-laravel": "^0.4.3",
+        "inertiajs/inertia-laravel": "^0.5.1",
         "laravel/framework": "^8.75",
         "laravel/jetstream": "^2.5",
         "laravel/sanctum": "^2.11",
