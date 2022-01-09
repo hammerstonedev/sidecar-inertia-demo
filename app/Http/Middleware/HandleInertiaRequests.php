@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Inertia\Middleware;
 use Tightenco\Ziggy\Ziggy;
 
@@ -37,8 +38,17 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
+        $ziggy = new Ziggy($group = null, $request->url());
+        $ziggy = $ziggy->toArray();
+
+        // During development, send over the entire Ziggy object, so that
+        // when routes change we don't have to redeploy.  In production,
+        // only send the current URL, as we will bake the Ziggy config
+        // into the Lambda SSR package.
+        $ziggy = app()->environment('production') ? Arr::only($ziggy, 'url') : $ziggy;
+
         return array_merge(parent::share($request), [
-            'ziggy' => (new Ziggy)->toArray()
+            'ziggy' => $ziggy
         ]);
     }
 }

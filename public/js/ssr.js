@@ -41190,6 +41190,17 @@ module.exports = require("zlib");
 
 /***/ }),
 
+/***/ "./compiledZiggy":
+/*!***********************************************!*\
+  !*** external "require(\"./compiledZiggy\")" ***!
+  \***********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("./compiledZiggy");
+
+/***/ }),
+
 /***/ "./node_modules/vue/server-renderer/index.mjs":
 /*!****************************************************!*\
   !*** ./node_modules/vue/server-renderer/index.mjs ***!
@@ -41282,6 +41293,36 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -41353,11 +41394,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 exports.handler = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(event) {
+    var compiledZiggy;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
+            return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(__webpack_require__, /*! ./compiledZiggy */ "./compiledZiggy", 23));
+
+          case 2:
+            compiledZiggy = _context.sent;
+            _context.next = 5;
             return (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.createInertiaApp)({
               page: event,
               render: _vue_server_renderer__WEBPACK_IMPORTED_MODULE_2__.renderToString,
@@ -41365,21 +41412,24 @@ exports.handler = /*#__PURE__*/function () {
                 return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name));
               },
               setup: function setup(_ref2) {
+                var _event$props;
+
                 var app = _ref2.app,
                     props = _ref2.props,
                     plugin = _ref2.plugin;
 
-                var Ziggy = _objectSpread(_objectSpread({}, event.props.ziggy), {}, {
-                  location: new URL(event.props.ziggy.url)
-                });
+                var Ziggy = _objectSpread(_objectSpread({}, compiledZiggy || {}), event === null || event === void 0 ? void 0 : (_event$props = event.props) === null || _event$props === void 0 ? void 0 : _event$props.ziggy); // Construct a new location, since window.location is not available.
 
+
+                // Construct a new location, since window.location is not available.
+                Ziggy.location = new URL(Ziggy.url);
                 return (0,vue__WEBPACK_IMPORTED_MODULE_1__.createSSRApp)({
                   render: function render() {
                     return (0,vue__WEBPACK_IMPORTED_MODULE_1__.h)(app, props);
                   }
                 }).use(plugin).mixin({
                   methods: {
-                    // Pull the ziggy config off of the event.
+                    // Use our custom Ziggy object as the config.
                     route: function route(name, params, absolute) {
                       var config = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : Ziggy;
                       return (0,ziggy__WEBPACK_IMPORTED_MODULE_4__["default"])(name, params, absolute, config);
@@ -41389,10 +41439,10 @@ exports.handler = /*#__PURE__*/function () {
               }
             });
 
-          case 2:
+          case 5:
             return _context.abrupt("return", _context.sent);
 
-          case 3:
+          case 6:
           case "end":
             return _context.stop();
         }

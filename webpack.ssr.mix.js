@@ -20,6 +20,10 @@ mix
         target: 'node',
         externals: {
             node: true,
+            // Sidecar will ship a file called compiledZiggy as a part of
+            // the package. We don't want webpack to try to inline it
+            // because it doesn't exist at the time webpack runs.
+            './compiledZiggy': 'require("./compiledZiggy")'
         },
         resolve: {
             alias: {

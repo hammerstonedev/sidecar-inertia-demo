@@ -21,8 +21,12 @@ return [
 
         'sidecar' => [
             'handler' => \Hammerstone\Sidecar\Inertia\SSR::class,
+
             'timings' => true,
+
             'debug' => (bool)env('APP_DEBUG', false),
+
+            'ziggy' => true,
         ],
     ],
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ed7f259899a51ed8fd7a95f749ac623",
+    "content-hash": "222ac3dda50ee6e81dad397215e7a2a8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1206,16 +1206,16 @@
         },
         {
             "name": "hammerstone/sidecar",
-            "version": "v0.3.4",
+            "version": "v0.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hammerstonedev/sidecar.git",
-                "reference": "780c98b78a7a5acdfd634d507b405a4b5be8580e"
+                "reference": "2f7fe0c4a486c193df747d0433340799d4cdafad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/780c98b78a7a5acdfd634d507b405a4b5be8580e",
-                "reference": "780c98b78a7a5acdfd634d507b405a4b5be8580e",
+                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/2f7fe0c4a486c193df747d0433340799d4cdafad",
+                "reference": "2f7fe0c4a486c193df747d0433340799d4cdafad",
                 "shasum": ""
             },
             "require": {
@@ -1258,26 +1258,26 @@
             "description": "A Laravel package to deploy Lambda functions alongside your main application.",
             "support": {
                 "issues": "https://github.com/hammerstonedev/sidecar/issues",
-                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.3.4"
+                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.3.5"
             },
-            "time": "2022-01-02T21:58:32+00:00"
+            "time": "2022-01-09T19:05:20+00:00"
         },
         {
             "name": "hammerstone/sidecar-inertia",
-            "version": "dev-main",
+            "version": "v0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hammerstonedev/sidecar-inertia.git",
-                "reference": "d55ea837aedebeac2670969a442fe212327437a1"
+                "reference": "cd0e8885eed3b409cd83d69fd2adfc6c97c95d61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hammerstonedev/sidecar-inertia/zipball/d55ea837aedebeac2670969a442fe212327437a1",
-                "reference": "d55ea837aedebeac2670969a442fe212327437a1",
+                "url": "https://api.github.com/repos/hammerstonedev/sidecar-inertia/zipball/cd0e8885eed3b409cd83d69fd2adfc6c97c95d61",
+                "reference": "cd0e8885eed3b409cd83d69fd2adfc6c97c95d61",
                 "shasum": ""
             },
             "require": {
-                "hammerstone/sidecar": "v0.3.4",
+                "hammerstone/sidecar": "v0.3.5",
                 "illuminate/support": "^8.0",
                 "inertiajs/inertia-laravel": "^0.5.1",
                 "php": "^7.2|^8.0"
@@ -1287,7 +1287,6 @@
                 "orchestra/testbench": "^5.0|^6.0",
                 "phpunit/phpunit": "^8.4"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1312,9 +1311,9 @@
             "description": "A Laravel package to render Inertia apps on AWS Lambda.",
             "support": {
                 "issues": "https://github.com/hammerstonedev/sidecar-inertia/issues",
-                "source": "https://github.com/hammerstonedev/sidecar-inertia/tree/main"
+                "source": "https://github.com/hammerstonedev/sidecar-inertia/tree/v0.0.3"
             },
-            "time": "2022-01-08T03:57:33+00:00"
+            "time": "2022-01-09T20:59:17+00:00"
         },
         {
             "name": "inertiajs/inertia-laravel",
@@ -9023,9 +9022,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "hammerstone/sidecar-inertia": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
